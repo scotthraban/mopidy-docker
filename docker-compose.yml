@@ -1,0 +1,13 @@
+version: "3"
+services:
+  mopidy:
+    image: mopidy
+    ports:
+      - 6600:6600
+      - 0.0.0.0:6680:6680
+    volumes:
+      - ./docker/mopidy/mopidy.conf:/config/mopidy.conf
+      - ./docker/mopidy/mopidy.conf:/var/lib/mopidy/.config/mopidy/mopidy.conf
+      - ./docker/mopidy/mopidy.conf:/etc/mopidy/mopidy.conf
+      - ./docker/mopidy/iris:/var/lib/mopidy
+      - /mnt/music:/var/lib/mopidy/music
