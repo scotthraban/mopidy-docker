@@ -1,4 +1,4 @@
-FROM alpine:3.19
+FROM alpine:3.20
 
 USER root
 WORKDIR /
@@ -32,6 +32,7 @@ RUN python3 -m pip install --no-cache --upgrade --break-system-packages pip && \
 RUN addgroup mopidy audio && \
     addgroup mopidy wheel && \
     usermod -u $UID mopidy && \
+    mkdir ${DATA_DIR}/.config && \
     chown mopidy:audio -R $DATA_DIR /entrypoint.sh
 
 # The sudoers bit only needed if Mopidy-Iris and Mopidy-Local are both installed, see above
