@@ -1,10 +1,5 @@
 Mopidy-Local
 Mopidy-Iris
-# Mopidy-Mpd
-# Mopidy-MusicBox-Webclient
-# Mopidy-Soundcloud
-# Mopidy-Youtube
-# Mopidy-YTMusic
-# ytmusicapi
-# youtube_dl
-# tox
+Mopidy-Mpd
+Mopidy-MusicBox-Webclient
+Mopidy-MPD
